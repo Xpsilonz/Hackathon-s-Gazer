@@ -1,0 +1,9 @@
+opencv-python
+mediapipe
+numpy
+pillow
+scikit-learn
+tensorflow
+pytesseract
+pywin32
+requests
