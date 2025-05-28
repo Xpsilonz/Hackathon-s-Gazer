@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Gazer Chatbot",
+  "version": "1.0",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "alarms"
+  ],
+  "host_permissions": [
+    "http://yodin2327.dothome.co.kr/gazer/ex/*",
+    "http://yodin2327.dothome.co.kr/gazer/pc/*",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": { "default_title": "Gazer Chatbot" },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
